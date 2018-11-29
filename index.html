@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Static Commerce Demo</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <!-- Static content -->
+    <h1>Black Men T-shirt with White Logo</h1>
+
+    <img src="https://img.commercelayer.io/skus/TSHIRTMM000000FFFFFF.png?fm=jpg&q=90" alt="">
+
+    <!-- Price tag -->
+    <div class="clayer-price" data-sku-code="TSHIRTMM000000FFFFFFMXXX">
+      <span class="amount"></span>
+      <span class="compare-at-amount"></span>
+    </div>
+
+    <!-- Variants -->
+    <h3>Select size</h3>
+    <ul>
+      <li>
+        <input class="clayer-variant" name="variant" type="radio" data-sku-code="TSHIRTMM000000FFFFFFMXXX" data-sku-name="Black Men T-shirt with White Logo (M)" /> <strong>M</strong>
+      </li>
+      <li>
+        <input class="clayer-variant" name="variant" type="radio" data-sku-code="TSHIRTMM000000FFFFFFLXXX" data-sku-name="Black Men T-shirt with White Logo (L)" /> <strong>L</strong>
+      </li>
+      <li>
+        <input class="clayer-variant" name="variant" type="radio" data-sku-code="TSHIRTMM000000FFFFFFXLXX" data-sku-name="Black Men T-shirt with White Logo (XL)" /> <strong>XL</strong>
+      </li>
+    </ul>
+
+    <!-- Availability message -->
+    <div id="clayer-availability-message-container">
+      <template id="clayer-availability-message-available-template">
+        <p>
+          Available in
+          <span class="clayer-availability-message-available-min-days"></span>-
+          <span class="clayer-availability-message-available-max-days"></span> days with
+          <span class="clayer-availability-message-available-shipping-method-name"></span>
+          (<span class="clayer-availability-message-available-shipping-method-price"></span>)
+        </p>
+      </template>
+      <template id="clayer-availability-message-unavailable-template">
+        <p>The selected SKU is not available.</p>
+      </template>
+    </div>
+
+    <!-- Add to bag -->
+    <a href="#" class="clayer-add-to-bag">Add to shopping bag</a>
+    <br/>
+
+    <!-- Shopping bag -->
+    <h3>Shopping Bag (<span id="clayer-shopping-bag-items-count">0</span>) <a href="#" id="clayer-shopping-bag-toggle">toggle</a></h3>
+
+    <div id="clayer-shopping-bag-container">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">SKU</th>
+            <th>Unit price</th>
+            <th>Q.ty</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="clayer-shopping-bag-items-container">
+          <template id="clayer-shopping-bag-item-template">
+            <tr>
+              <td>
+                <img class="clayer-shopping-bag-item-image"></img>
+              </td>
+              <td class="clayer-shopping-bag-item-name"></td>
+              <td class="clayer-shopping-bag-item-unit-amount"></td>
+              <td class="clayer-shopping-bag-item-qty-container"></td>
+              <td class="clayer-shopping-bag-item-total-amount"></td>
+              <td>
+                <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+
+      <table>
+        <tr>
+          <td>Subtotal</td>
+          <td id="clayer-shopping-bag-subtotal"></td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td id="clayer-shopping-bag-shipping"></td>
+        </tr>
+        <tr>
+          <td>Payment</td>
+          <td id="clayer-shopping-bag-payment"></td>
+        </tr>
+        <tr>
+          <td>Discount</td>
+          <td id="clayer-shopping-bag-discount"></td>
+        </tr>
+        <tr>
+          <td>Taxes</td>
+          <td id="clayer-shopping-bag-taxes"></td>
+        </tr>
+        <tr class="total">
+          <td>Total</td>
+          <td id="clayer-shopping-bag-total"></td>
+        </tr>
+      </table>
+
+      <!-- Checkout -->
+
+      <a href="#" id="clayer-shopping-bag-checkout">Proceed to checkout</a>
+    </div>
+
+    <!-- Config -->
+    <div id="clayer-config"
+      data-base-url="https://static-commerce.commercelayer.io"
+      data-client-id="351020e9c84f2076755083f08bfe8e47365a76395db1059c3219c37abff86534"
+      data-market-id="184"
+      data-country-code="IT"
+      data-language-code="it"
+      data-cart-url="http://example.com/cart"
+      data-return-url="http://example.com/return"
+      data-privacy-url="http://example.com/privacy"
+      data-terms-url="http://example.com/terms">
+    </div>
+
+    <!-- JS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.2.1/dist/commercelayer.min.js"></script>
+  </body>
+</html>
