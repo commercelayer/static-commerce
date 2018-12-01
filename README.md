@@ -10,7 +10,7 @@ Create a [free developer account](https://core.commercelayer.io/users/sign_up) o
 - Base endpoint
 - Allowed scopes
 
-![API Credentials](docs/channel-application.svg?raw=true "API Credentials")
+<img src="docs/channel-application.svg?raw=true" />
 
 
 <!-- <input class="clayer-variant" name="variant" type="hidden" data-sku-code="TSHIRTMMFFFFFF000000LXXX" data-sku-name="White Men T-shirt with Black Logo (XL)" /> -->
