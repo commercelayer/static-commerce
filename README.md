@@ -309,4 +309,4 @@ Add an element with `clayer-shopping-bag-checkout` ID wherever you want to show 
 
 For some clients, you may want to build your own checkout experience, rather than redirecting customers to the hosted checkout application provided by Commerce Layer. Another common feature that you may want to build is a customer account area, where they can manage their order history, wallet (i.e. saved payment methods), address book and returns.
 
-The next versions of Commerce Layer's JS library will be enhanced to provide all those features with equal ease. In the meantime, please explore the official ([API reference](https://commercelayer.io/api/reference/)) for all the available endpoints and resources.
+The next versions of Commerce Layer's JS library will be enhanced to provide all those features with equal ease. In the meantime, please explore the official [API reference](https://commercelayer.io/api/reference/) for all the available endpoints and resources.
