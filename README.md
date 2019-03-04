@@ -32,7 +32,7 @@ Add an element with `clayer-config` ID and populate its data attributes with you
     </div>
 
     <!-- JS Library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.5.5/dist/commercelayer.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.7.9/dist/commercelayer.min.js"></script>
   </body>
 </html>
 ```
@@ -159,19 +159,19 @@ Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` 
 
     <!-- Availability message -->
     <div id="clayer-availability-message-container">
-      <template id="clayer-availability-message-available-template">
-        <p>
-          Available in
-          <span class="clayer-availability-message-available-min-days"></span>-
-          <span class="clayer-availability-message-available-max-days"></span> days with
-          <span class="clayer-availability-message-available-shipping-method-name"></span>
-          (<span class="clayer-availability-message-available-shipping-method-price"></span>)
-        </p>
-      </template>
-      <template id="clayer-availability-message-unavailable-template">
-        <p>The selected SKU is not available.</p>
-      </template>
     </div>
+    <template id="clayer-availability-message-available-template">
+      <p>
+        Available in
+        <span class="clayer-availability-message-available-min-days"></span>-
+        <span class="clayer-availability-message-available-max-days"></span> days with
+        <span class="clayer-availability-message-available-shipping-method-name"></span>
+        (<span class="clayer-availability-message-available-shipping-method-price"></span>)
+      </p>
+    </template>
+    <template id="clayer-availability-message-unavailable-template">
+      <p>The selected SKU is not available.</p>
+    </template>
 
     <!-- Config [...] -->
 
@@ -243,17 +243,17 @@ Add the summary elements wherever you want to show the current shopping bag deta
     <div id="clayer-shopping-bag-container">
 
       <div id="clayer-shopping-bag-items-container">
-
-        <!-- Line item template -->
-        <template id="clayer-shopping-bag-item-template">
-          <img class="clayer-shopping-bag-item-image"></img>
-          <div class="clayer-shopping-bag-item-name"></div>
-          <div class="clayer-shopping-bag-item-unit-amount"></div>
-          <div class="clayer-shopping-bag-item-qty-container"></div>
-          <div class="clayer-shopping-bag-item-total-amount"></div>
-          <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
-        </template>
       </div>
+
+      <!-- Line item template -->
+      <template id="clayer-shopping-bag-item-template">
+        <img class="clayer-shopping-bag-item-image"></img>
+        <div class="clayer-shopping-bag-item-name"></div>
+        <div class="clayer-shopping-bag-item-unit-amount"></div>
+        <div class="clayer-shopping-bag-item-qty-container"></div>
+        <div class="clayer-shopping-bag-item-total-amount"></div>
+        <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+      </template>      
 
       <!-- Summary -->
       <div id="clayer-shopping-bag-subtotal"></div>

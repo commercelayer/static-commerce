@@ -33,19 +33,19 @@
 
     <!-- Availability message -->
     <div id="clayer-availability-message-container">
-      <template id="clayer-availability-message-available-template">
-        <p>
-          Available in
-          <span class="clayer-availability-message-available-min-days"></span>-
-          <span class="clayer-availability-message-available-max-days"></span> days with
-          <span class="clayer-availability-message-available-shipping-method-name"></span>
-          (<span class="clayer-availability-message-available-shipping-method-price"></span>)
-        </p>
-      </template>
-      <template id="clayer-availability-message-unavailable-template">
-        <p>The selected SKU is not available.</p>
-      </template>
     </div>
+    <template id="clayer-availability-message-available-template">
+      <p>
+        Available in
+        <span class="clayer-availability-message-available-min-days"></span>-
+        <span class="clayer-availability-message-available-max-days"></span> days with
+        <span class="clayer-availability-message-available-shipping-method-name"></span>
+        (<span class="clayer-availability-message-available-shipping-method-price"></span>)
+      </p>
+    </template>
+    <template id="clayer-availability-message-unavailable-template">
+      <p>The selected SKU is not available.</p>
+    </template>
 
     <!-- Add to bag -->
     <a href="#" class="clayer-add-to-bag">Add to shopping bag</a>
@@ -66,21 +66,21 @@
           </tr>
         </thead>
         <tbody id="clayer-shopping-bag-items-container">
-          <template id="clayer-shopping-bag-item-template">
-            <tr>
-              <td>
-                <img class="clayer-shopping-bag-item-image"></img>
-              </td>
-              <td class="clayer-shopping-bag-item-name"></td>
-              <td class="clayer-shopping-bag-item-unit-amount"></td>
-              <td class="clayer-shopping-bag-item-qty-container"></td>
-              <td class="clayer-shopping-bag-item-total-amount"></td>
-              <td>
-                <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
-              </td>
-            </tr>
-          </template>
         </tbody>
+        <template id="clayer-shopping-bag-item-template">
+          <tr>
+            <td>
+              <img class="clayer-shopping-bag-item-image"></img>
+            </td>
+            <td class="clayer-shopping-bag-item-name"></td>
+            <td class="clayer-shopping-bag-item-unit-amount"></td>
+            <td class="clayer-shopping-bag-item-qty-container"></td>
+            <td class="clayer-shopping-bag-item-total-amount"></td>
+            <td>
+              <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+            </td>
+          </tr>
+        </template>
       </table>
 
       <table>
@@ -129,6 +129,6 @@
     </div>
 
     <!-- JS Library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.5.5/dist/commercelayer.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.7.9/dist/commercelayer.min.js"></script>
   </body>
 </html>
