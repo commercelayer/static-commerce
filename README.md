@@ -32,7 +32,7 @@ Add an element with `clayer-config` ID and populate its data attributes with you
     </div>
 
     <!-- JS Library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.7.9/dist/commercelayer.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.8.0/dist/commercelayer.min.js"></script>
   </body>
 </html>
 ```
@@ -202,6 +202,11 @@ Add an element with `clayer-add-to-bag` class wherever you want to show the add 
 
     <!-- Add to bag -->
     <a href="#" class="clayer-add-to-bag">Add to shopping bag</a>
+
+    <!-- Add to bag (multiple) -->
+    <!-- <a href="#" class="clayer-add-to-bag" data-sku-code="TSHIRTMM000000FFFFFFMXXX">Add to shopping bag</a> -->
+    <!-- <a href="#" class="clayer-add-to-bag" data-sku-code="TSHIRTMM000000FFFFFFLXXX">Add to shopping bag</a> -->
+    <!-- <a href="#" class="clayer-add-to-bag" data-sku-code="TSHIRTMM000000FFFFFFXLXX">Add to shopping bag</a> -->
 
     <!-- Config [...] -->
 
