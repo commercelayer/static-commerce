@@ -247,12 +247,14 @@ Add the summary elements wherever you want to show the current shopping bag deta
 
       <!-- Line item template -->
       <template id="clayer-shopping-bag-item-template">
-        <img class="clayer-shopping-bag-item-image"></img>
-        <div class="clayer-shopping-bag-item-name"></div>
-        <div class="clayer-shopping-bag-item-unit-amount"></div>
-        <div class="clayer-shopping-bag-item-qty-container"></div>
-        <div class="clayer-shopping-bag-item-total-amount"></div>
-        <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+        <div><!-- Make sure to wrap the the line item elements -->
+          <img class="clayer-shopping-bag-item-image"></img>
+          <div class="clayer-shopping-bag-item-name"></div>
+          <div class="clayer-shopping-bag-item-unit-amount"></div>
+          <div class="clayer-shopping-bag-item-qty-container"></div>
+          <div class="clayer-shopping-bag-item-total-amount"></div>
+          <a href="#" class="clayer-shopping-bag-item-remove">remove</a>          
+        </div>
       </template>      
 
       <!-- Summary -->
