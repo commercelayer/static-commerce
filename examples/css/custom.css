@@ -1,0 +1,19 @@
+.compare-at-amount {
+  text-decoration: line-through;
+}
+td > img {
+  width: 50px;
+}
+.select,
+.radio-buttons {
+  margin-bottom: 10px;
+}
+.clayer-availability-message-container {
+  padding: 10px 0;
+}
+#clayer-shopping-bag-container {
+  display: none;
+}
+#clayer-shopping-bag-container.open {
+  display: block;
+}
