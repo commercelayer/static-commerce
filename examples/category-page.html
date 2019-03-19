@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Category page example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Category page
+        </h1>
+        <p class="subtitle">
+          Many products in the same page
+        </p>
+
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <img src="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90" />
+              <div class="content">
+                <h4>Black Baby Onesie Short Sleeve with Pink Logo (New born)</h4>
+                <p class="help">BABYONBU000000E63E74NBXX</p>
+                <div class="clayer-price" data-sku-code="BABYONBU000000E63E74NBXX">
+                  <span class="amount"></span>
+                  <span class="compare-at-amount"></span>
+                </div>
+              </div>
+
+              <a href="#" class="button is-fullwidth clayer-add-to-bag" data-sku-code="BABYONBU000000E63E74NBXX"
+                                                           data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (New born)"
+                                                           data-sku-reference="Commerce Layer 01"
+                                                           data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90"
+                                                           data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX" >
+                                                           Add to bag</a>
+
+
+              <div class="clayer-availability-message-container" id="availability-message-BABYONBU000000E63E74NBXX"></div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <img src="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90" />
+              <div class="content">
+                <h4>Black Baby Onesie Short Sleeve with Pink Logo (6 Months)</h4>
+                <p class="help">BABYONBU000000E63E746MXX</p>
+                <div class="clayer-price" data-sku-code="BABYONBU000000E63E746MXX">
+                  <span class="amount"></span>
+                  <span class="compare-at-amount"></span>
+                </div>
+              </div>
+
+              <a href="#" class="button is-fullwidth clayer-add-to-bag" data-sku-code="BABYONBU000000E63E746MXX"
+                                                           data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)"
+                                                           data-sku-reference="Commerce Layer 02"
+                                                           data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90"
+                                                           data-availability-message-container-id="availability-message-BABYONBU000000E63E746MXX">
+                                                           Add to bag</a>
+
+              <div class="clayer-availability-message-container" id="availability-message-BABYONBU000000E63E746MXX"></div>
+            </div>
+
+          </div>
+          <div class="column">
+            <div class="box">
+              <img src="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90" />
+              <div class="content">
+                <h4>Black Baby Onesie Short Sleeve with Pink Logo (12 Months)</h4>
+                <p class="help">BABYONBU000000E63E7412MX</p>
+                <div class="clayer-price" data-sku-code="BABYONBU000000E63E7412MX">
+                  <span class="amount"></span>
+                  <span class="compare-at-amount"></span>
+                </div>
+              </div>
+
+              <a href="#" class="button is-fullwidth clayer-add-to-bag" data-sku-code="BABYONBU000000E63E7412MX"
+                                                           data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (12 Months)"
+                                                           data-sku-reference="Commerce Layer 03"
+                                                           data-availability-message-container-id="availability-message-BABYONBU000000E63E7412MX">
+                                                           Add to bag</a>
+
+
+              <div class="clayer-availability-message-container" id="availability-message-BABYONBU000000E63E7412MX"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Availability message templates -->
+        <template id="clayer-availability-message-available-template">
+          <p>
+            Available in
+            <span class="clayer-availability-message-available-min-days"></span>-
+            <span class="clayer-availability-message-available-max-days"></span> days with
+            <span class="clayer-availability-message-available-shipping-method-name"></span>
+            (<span class="clayer-availability-message-available-shipping-method-price"></span>)
+          </p>
+        </template>
+        <template id="clayer-availability-message-unavailable-template">
+          <p class="has-text-danger">The selected SKU is not available.</p>
+        </template>
+
+        <!-- Shopping bag -->
+        <h2 class="title">
+          Shopping bag
+        </h2>
+        <p class="subtitle">
+          Your shopping bag contains <span class="clayer-shopping-bag-items-count">0</span> items (<span class="clayer-shopping-bag-total"></span>)
+          <a href="#" class="clayer-shopping-bag-toggle">toggle</a>
+        </p>
+
+        <div id="clayer-shopping-bag-container">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th colspan="2">SKU</th>
+                <th>Reference</th>
+                <th>Unit price</th>
+                <th>Q.ty</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="clayer-shopping-bag-items-container">
+            </tbody>
+            <template id="clayer-shopping-bag-item-template">
+              <tr>
+                <td>
+                  <img class="clayer-shopping-bag-item-image"></img>
+                </td>
+                <td class="clayer-shopping-bag-item-name"></td>
+                <td class="clayer-shopping-bag-item-reference"></td>
+                <td class="clayer-shopping-bag-item-unit-amount"></td>
+                <td class="clayer-shopping-bag-item-qty-container">
+                  <span class="clayer-shopping-bag-item-availability-message-container"></span>
+                </td>
+                <td class="clayer-shopping-bag-item-total-amount"></td>
+                <td>
+                  <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+                </td>
+              </tr>
+            </template>
+          </table>
+
+          <table class="table is-fullwidth">
+            <tr>
+              <td>Subtotal</td>
+              <td class="clayer-shopping-bag-subtotal"></td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td class="clayer-shopping-bag-shipping"></td>
+            </tr>
+            <tr>
+              <td>Payment</td>
+              <td class="clayer-shopping-bag-payment"></td>
+            </tr>
+            <tr>
+              <td>Discount</td>
+              <td class="clayer-shopping-bag-discount"></td>
+            </tr>
+            <tr>
+              <td>Taxes</td>
+              <td class="clayer-shopping-bag-taxes"></td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="clayer-shopping-bag-total"></td>
+            </tr>
+          </table>
+
+          <!-- Checkout -->
+
+          <a href="#" class="button is-success clayer-shopping-bag-checkout">Proceed to checkout</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Config -->
+    <div id="clayer-config"
+      data-base-url="https://static-commerce-demo.commercelayer.io"
+      data-client-id="377bc0fa1672ef1395fb2113ec187091b2251eefede49ddca761a94adc4ede06"
+      data-market-id="418"
+      data-country-code="US"
+      data-language-code="en"
+      data-cart-url="https://example.com/cart"
+      data-return-url="https://example.com/return"
+      data-privacy-url="https://example.com/privacy"
+      data-terms-url="https://example.com/terms"
+      data-dev-settings-debug="true"
+      data-dev-settings-console="true"
+      data-dev-settings-trace="true" >
+    </div>
+
+    <!-- Commerce Layer Events -->
+    <script type="text/javascript">
+      [
+        'clayer-prices-ready',
+        'clayer-variants-ready',
+        'clayer-add-to-bags-ready',
+        'clayer-variant-selected',
+        'clayer-order-ready',
+        'clayer-line-item-created',
+        'clayer-line-item-updated',
+        'clayer-line-item-deleted'
+      ].forEach(function(event){
+        document.addEventListener(event, function(e){
+          console.log(`[CLAYER CUSTOM EVENT] ${event}`)
+        })
+      })
+    </script>
+
+    <!-- JS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.3/dist/commercelayer.min.js"></script>
+
+
+  </body>
+</html>
