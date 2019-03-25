@@ -35,7 +35,7 @@ Add an element with `clayer-config` ID and populate its data attributes with you
     </div>
 
     <!-- JS Library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.3/dist/commercelayer.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.4/dist/commercelayer.min.js"></script>
   </body>
 </html>
 ```
