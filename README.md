@@ -37,7 +37,7 @@ Add an element with `clayer-config` ID and populate its data attributes with you
     <!-- JS Library -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.10/dist/commercelayer.min.js"
+      src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.13/dist/commercelayer.min.js"
     ></script>
   </body>
 </html>
@@ -537,6 +537,13 @@ Commerce Layer library dispatches the following document events:
 | clayer-line-item-updated | Line item quantity has been changed  |
 | clayer-line-item-deleted | Line item has been removed from cart |
 | clayer-order-ready       | Order (cart) has been fetched        |
+| clayer-skus-empty        | The list of SKUs is empty            |
+
+Note the the list of SKUs for a given market can be empty for one of the following reasons:
+
+1. The SKUs don't exist in Commerce Layer
+2. The SKUs don't have a price in the market price list
+3. The SKUs don't have any stock item in any of the market stock locations (inventory model)
 
 ## 11. Custom checkout, customer accounts, and more
 
