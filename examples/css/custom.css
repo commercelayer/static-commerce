@@ -17,3 +17,9 @@ td > img {
 #clayer-shopping-bag-container.open {
   display: block;
 }
+.clayer-add-to-bag {
+  margin-top: 20px;
+}
+.clayer-add-to-bag-quantity {
+  width: 100px;
+}

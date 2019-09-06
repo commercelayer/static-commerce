@@ -37,13 +37,18 @@
 
           <!-- Variants (select) -->
           <div class="select"> <!-- Only for styling -->
-            <select class="clayer-variant-select" name="variant" data-availability-message-container-id="availability-message" data-add-to-bag-id="add-to-bag">
+            <select class="clayer-variant-select" name="variant" data-availability-message-container-id="availability-message" data-add-to-bag-id="add-to-bag" data-add-to-bag-quantity-id="add-to-bag-quantity">
               <option value="" disabled selected>Select variant</option>
               <option class="clayer-variant" data-sku-code="BABYONBU000000E63E74NBXX" data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (New born)">New born</option>
               <option class="clayer-variant" data-sku-code="BABYONBU000000E63E746MXX" data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)">6 months</option>
               <option class="clayer-variant" data-sku-code="BABYONBU000000E63E7412MX" data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (12 Months)">12 Months</option>
             </select>
           </div>
+
+          <!-- Add to bag quantity -->
+          <input id="add-to-bag-quantity" type="number" value="1" class="input clayer-add-to-bag-quantity">
+
+          <!-- Add to bag -->
           <a href="#" class="button is-fullwidth clayer-add-to-bag" id="add-to-bag"
                       data-availability-message-container-id="availability-message">Add to bag</a>
 
@@ -143,9 +148,9 @@
 
   <!-- Config -->
   <div id="clayer-config"
-    data-base-url="https://static-commerce-demo.commercelayer.io"
-    data-client-id="377bc0fa1672ef1395fb2113ec187091b2251eefede49ddca761a94adc4ede06"
-    data-market-id="418"
+    data-base-url="https://static-commerce.commercelayer.io"
+    data-client-id="351020e9c84f2076755083f08bfe8e47365a76395db1059c3219c37abff86534"
+    data-market-id="185"
     data-country-code="US"
     data-language-code="en"
     data-cart-url="https://example.com/cart"
@@ -158,7 +163,7 @@
   </div>
 
   <!-- JS Library -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.10/dist/commercelayer.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.11/dist/commercelayer.min.js"></script>
 
   </body>
 </html>

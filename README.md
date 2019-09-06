@@ -12,14 +12,14 @@ Create a [free developer account](https://core.commercelayer.io/users/sign_up) o
 
 Add an element with `clayer-config` ID and populate its data attributes with your credentials and page preferences. Then add a script link to import the Commerce Layer's JS library right before the closing body tag:
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head></head>
   <body>
-
     <!-- Config -->
-    <div id="clayer-config"
+    <div
+      id="clayer-config"
       data-base-url="https://static-commerce-demo.commercelayer.io"
       data-client-id="377bc0fa1672ef1395fb2113ec187091b2251eefede49ddca761a94adc4ede06"
       data-market-id="418"
@@ -31,11 +31,14 @@ Add an element with `clayer-config` ID and populate its data attributes with you
       data-terms-url="https://example.com/terms"
       data-dev-settings-debug="true"
       data-dev-settings-console="true"
-      data-dev-settings-trace="true" >
-    </div>
+      data-dev-settings-trace="true"
+    ></div>
 
     <!-- JS Library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.10/dist/commercelayer.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.10/dist/commercelayer.min.js"
+    ></script>
   </body>
 </html>
 ```
@@ -44,21 +47,30 @@ Add an element with `clayer-config` ID and populate its data attributes with you
 
 Add any content to the page, like product names, descriptions, and images.
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content -->  
+    <!-- Static content -->
     <title>Static Commerce Demo</title>
   </head>
   <body>
-
     <!-- Static content -->
     <h1>Black Baby Onesie Short Sleeve with Pink Logo (New born)</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
 
-    <img src="https://img.commercelayer.io/skus/BABYONBU000000E63E74NBXX.png?fm=jpg&q=90" />
+    <img
+      src="https://img.commercelayer.io/skus/BABYONBU000000E63E74NBXX.png?fm=jpg&q=90"
+    />
 
     <!-- Config [...] -->
 
@@ -71,15 +83,14 @@ Add any content to the page, like product names, descriptions, and images.
 
 Add an element with `clayer-price` class and `data-sku-code` data attribute wherever you want to show a product price. The child element with class `amount` gets populated with the price that has been defined in Commerce Layer for that SKU code, in the current page market ID (see configuration). The child element with class `compare-at-amount` gets populated only if greater than the price amount.
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag -->
     <div class="clayer-price" data-sku-code="BABYONBU000000E63E74NBXX">
@@ -102,15 +113,14 @@ Add an element with `clayer-availability-message-unavailable-template` ID as the
 
 Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` or `span` elements and hide them through CSS if you want to keep legacy browser support.
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag  [...] -->
 
@@ -121,9 +131,15 @@ Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` 
       <p>
         Available in
         <span class="clayer-availability-message-available-min-days"></span>-
-        <span class="clayer-availability-message-available-max-days"></span> days with
-        <span class="clayer-availability-message-available-shipping-method-name"></span>
-        (<span class="clayer-availability-message-available-shipping-method-price"></span>)
+        <span class="clayer-availability-message-available-max-days"></span>
+        days with
+        <span
+          class="clayer-availability-message-available-shipping-method-name"
+        ></span>
+        (<span
+          class="clayer-availability-message-available-shipping-method-price"
+        ></span
+        >)
       </p>
     </template>
 
@@ -142,15 +158,14 @@ Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` 
 
 Add a link with `clayer-add-to-bag` class and a list of data attributes as follows:
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag  [...] -->
 
@@ -158,15 +173,18 @@ Add a link with `clayer-add-to-bag` class and a list of data attributes as follo
 
     <!-- Availability message templates [...] -->
 
-    <!-- Add to bag button -->    
+    <!-- Add to bag button -->
 
-    <a href="#" class="clayer-add-to-bag"
-       data-sku-code="BABYONBU000000E63E74NBXX"
-       data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)"
-       data-sku-reference="Any reference"
-       data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74NBXX.png?fm=jpg&q=90&w=400"
-       data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX">
-       Add to bag
+    <a
+      href="#"
+      class="clayer-add-to-bag"
+      data-sku-code="BABYONBU000000E63E74NBXX"
+      data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)"
+      data-sku-reference="Any reference"
+      data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74NBXX.png?fm=jpg&q=90&w=400"
+      data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX"
+    >
+      Add to bag
     </a>
 
     <!-- Config [...] -->
@@ -178,15 +196,14 @@ Add a link with `clayer-add-to-bag` class and a list of data attributes as follo
 
 The SKU `data-sku-name`, `data-sku-reference`, and `data-sku-image-url` (if present) are used as the line item attributes. The `data-availability-message-container-id` identifies the ID of the element that you want the unavailable messagfe to be appended when the SKU is out of stock. Put the container anywhere in the page:
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag  [...] -->
 
@@ -194,12 +211,60 @@ The SKU `data-sku-name`, `data-sku-reference`, and `data-sku-image-url` (if pres
 
     <!-- Availability message templates [...] -->
 
-    <!-- Add to bag button [...] -->    
+    <!-- Add to bag button [...] -->
 
-    <!-- Availability message container -->    
-    <div class="clayer-availability-message-container"
-         id="availability-message-BABYONBU000000E63E74NBXX">
-    </div>
+    <!-- Availability message container -->
+    <div
+      class="clayer-availability-message-container"
+      id="availability-message-BABYONBU000000E63E74NBXX"
+    ></div>
+
+    <!-- Config [...] -->
+
+    <!-- JS Library [...] -->
+  </body>
+</html>
+```
+
+Sometimes you may want to let the customer add more than one item to the shopping bag. To do that, add an input field with `clayer-add-to-bag-quantity` class and a `data-add-to-bag-quantity-id` data attribute to the add to bag button as follows:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Static content [...] -->
+  </head>
+  <body>
+    <!-- Static content [...] -->
+
+    <!-- Price tag  [...] -->
+
+    <!-- Variants [...] -->
+
+    <!-- Availability message templates [...] -->
+
+    <!-- Add to bag quantity (optional) -->
+    <input
+      id="add-to-bag-quantity-BABYONBU000000E63E74NBXX"
+      type="number"
+      value="1"
+      class="clayer-add-to-bag-quantity"
+      data-sku-code="BABYONBU000000E63E74NBXX"
+    />
+
+    <!-- Add to bag button (with optional quantity identifier)-->
+    <a
+      href="#"
+      class="clayer-add-to-bag"
+      data-sku-code="BABYONBU000000E63E74NBXX"
+      data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)"
+      data-sku-reference="Any reference"
+      data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74NBXX.png?fm=jpg&q=90&w=400"
+      data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX"
+      data-add-to-bag-quantity-id="add-to-bag-quantity-BABYONBU000000E63E74NBXX"
+    >
+      Add to bag
+    </a>
 
     <!-- Config [...] -->
 
@@ -210,16 +275,16 @@ The SKU `data-sku-name`, `data-sku-reference`, and `data-sku-image-url` (if pres
 
 ## 7. Variant Options
 
-If your product has many variants, add an element with `clayer-variant` class and `data-sku-code` for each variant option. You can use either a `select` tag or a list of `radio` buttons. The list if data attributes that you can add to each option are the same of the shopping bag example above. The add to bag button is not referred to a specific SKU and its data attributes get updated when an option is selected.
+If your product has many variants, add an element with `clayer-variant` class and `data-sku-code` for each variant option. You can use either a `select` tag or a list of `radio` buttons. The list if data attributes that you can add to each option are the same of the shopping bag example above. The add to bag button is not referred to a specific SKU and its data attributes get updated when an option is selected. You can optionally add a quantity field to let the customer add more than one item to the shopping bag.
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag  [...] -->
 
@@ -227,15 +292,46 @@ If your product has many variants, add an element with `clayer-variant` class an
 
     <!-- Availability message templates [...] -->
 
-    <!-- Variants (select) -->
-    <select class="clayer-variant-select" name="variant" data-availability-message-container-id="availability-message" data-add-to-bag-id="add-to-bag">
+    <!-- Variants (select, with optional quantity identifier) -->
+    <select
+      class="clayer-variant-select"
+      name="variant"
+      data-availability-message-container-id="availability-message"
+      data-add-to-bag-id="add-to-bag"
+      data-add-to-bag-quantity-id="add-to-bag-quantity"
+    >
       <option value="" disabled selected>Select variant</option>
-      <option class="clayer-variant" data-sku-code="BABYONBU000000E63E74NBXX" data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (New born)">New born</option>
-      <option class="clayer-variant" data-sku-code="BABYONBU000000E63E746MXX" data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)">6 months</option>
-      <option class="clayer-variant" data-sku-code="BABYONBU000000E63E7412MX" data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (12 Months)">12 Months</option>
+      <option
+        class="clayer-variant"
+        data-sku-code="BABYONBU000000E63E74NBXX"
+        data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (New born)"
+        >New born</option
+      >
+      <option
+        class="clayer-variant"
+        data-sku-code="BABYONBU000000E63E746MXX"
+        data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (6 Months)"
+        >6 months</option
+      >
+      <option
+        class="clayer-variant"
+        data-sku-code="BABYONBU000000E63E7412MX"
+        data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (12 Months)"
+        >12 Months</option
+      >
     </select>
 
-    <!-- Variants (radio) -->
+    <!-- Add to bag quantity (optional) -->
+    <input
+      id="add-to-bag-quantity"
+      type="number"
+      value="1"
+      class="clayer-add-to-bag-quantity"
+    />
+
+    <!-- Add to bag -->
+
+    <!-- Variants (radio, with optional quantity identifier) -->
     <!-- <input class="clayer-variant clayer-variant-radio" name="variant" type="radio"
            data-sku-code="BABYONBU000000E63E74NBXX"
            data-sku-name="Black Baby Onesie Short Sleeve with Pink Logo (New born)"
@@ -243,7 +339,8 @@ If your product has many variants, add an element with `clayer-variant` class an
            data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90"
            data-price-container-id="price"
            data-availability-message-container-id="availability-message"
-           data-add-to-bag-id="add-to-bag" /> New born
+           data-add-to-bag-id="add-to-bag"
+           data-add-to-bag-quantity-id="add-to-bag-quantity" /> New born
 
     <input class="clayer-variant clayer-variant-radio" name="variant" type="radio"
            data-sku-code="BABYONBU000000E63E746MXXFAKE"
@@ -252,7 +349,8 @@ If your product has many variants, add an element with `clayer-variant` class an
            data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90"
            data-price-container-id="price"
            data-availability-message-container-id="availability-message"
-           data-add-to-bag-id="add-to-bag" /> 6 months
+           data-add-to-bag-id="add-to-bag"
+           data-add-to-bag-quantity-id="add-to-bag-quantity" /> 6 months
 
     <input class="clayer-variant clayer-variant-radio" name="variant" type="radio"
            data-sku-code="BABYONBU000000E63E7412MX"
@@ -261,14 +359,23 @@ If your product has many variants, add an element with `clayer-variant` class an
            data-sku-image-url="https://img.commercelayer.io/skus/BABYONBU000000E63E74.png?fm=jpg&q=90"
            data-price-container-id="price"
            data-availability-message-container-id="availability-message"
-           data-add-to-bag-id="add-to-bag" /> 12 Months -->
+           data-add-to-bag-id="add-to-bag"
+           data-add-to-bag-quantity-id="add-to-bag-quantity" /> 12 Months -->
 
     <!-- Add to bag button -->
-    <a href="#" class="clayer-add-to-bag" id="add-to-bag"
-                data-availability-message-container-id="availability-message">Add to bag</a>
+    <a
+      href="#"
+      class="clayer-add-to-bag"
+      id="add-to-bag"
+      data-availability-message-container-id="availability-message"
+      >Add to bag</a
+    >
 
     <!-- Availability message container -->
-    <div class="clayer-availability-message-container" id="availability-message"></div>
+    <div
+      class="clayer-availability-message-container"
+      id="availability-message"
+    ></div>
 
     <!-- Config [...] -->
 
@@ -285,14 +392,14 @@ The `clayer-shopping-bag-items-container` is used as the parent element of the s
 
 Add the summary elements wherever you want to show the current shopping bag details. The `clayer-shopping-bag-toggle` element toggles an `open` class on the shopping bag container.
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag  [...] -->
 
@@ -383,14 +490,14 @@ Add the summary elements wherever you want to show the current shopping bag deta
 
 Add an element with `clayer-shopping-bag-checkout` class wherever you want to show the checkout button. The customer will be redirected to the Commerce Layer's hosted checkout application to complete the purchase and place the order.
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
   </head>
   <body>
-    <!-- Static content [...] -->    
+    <!-- Static content [...] -->
 
     <!-- Price tag  [...] -->
 
@@ -420,16 +527,16 @@ Add an element with `clayer-shopping-bag-checkout` class wherever you want to sh
 
 Commerce Layer library dispatches the following document events:
 
-|Event name| Description |
-|---|---|
-|clayer-prices-ready|Prices have been updated|
-|clayer-variants-ready|Variants have been updated|
-|clayer-add-to-bags-ready|Add to bag buttons have been updated|
-|clayer-variant-selected|SKU has been selected|
-|clayer-line-item-created|SKU has been added to bag|
-|clayer-line-item-updated|Line item quantity has been changed|
-|clayer-line-item-deleted|Line item has been removed from cart|
-|clayer-order-ready|Order (cart) has been fetched|
+| Event name               | Description                          |
+| ------------------------ | ------------------------------------ |
+| clayer-prices-ready      | Prices have been updated             |
+| clayer-variants-ready    | Variants have been updated           |
+| clayer-add-to-bags-ready | Add to bag buttons have been updated |
+| clayer-variant-selected  | SKU has been selected                |
+| clayer-line-item-created | SKU has been added to bag            |
+| clayer-line-item-updated | Line item quantity has been changed  |
+| clayer-line-item-deleted | Line item has been removed from cart |
+| clayer-order-ready       | Order (cart) has been fetched        |
 
 ## 11. Custom checkout, customer accounts, and more
 
