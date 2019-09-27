@@ -6,7 +6,7 @@ Commerce Layer is an API-first platform that lets you transform any plain HTML p
 
 Create a [free developer account](https://core.commercelayer.io/users/sign_up) on Commerce Layer and &mdash; when prompted &mdash; seed it with test data. Navigate to _Settings_ → _Applications_ and take note of the API credentials for your _channel_ application (Client ID, Base endpoint, Allowed scopes). Make sure that **public access is enabled**. The Client secret is not required, as we are building a client side application that would make the secret key visible ([learn more](https://commercelayer.io/api/reference/roles-and-permissions/)).
 
-![Credentials](docs/credentials.png?raw=true 'Credentials')
+![Credentials](docs/credentials.png?raw=true "Credentials")
 
 ## 2. Configuration
 
@@ -37,7 +37,7 @@ Add an element with `clayer-config` ID and populate its data attributes with you
     <!-- JS Library -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.14/dist/commercelayer.min.js"
+      src="https://cdn.jsdelivr.net/npm/commercelayer@1.9.16/dist/commercelayer.min.js"
     ></script>
   </body>
 </html>
