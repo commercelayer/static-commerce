@@ -1,10 +1,10 @@
 # Static Commerce
 
-Commerce Layer is an API-first platform that lets you transform any plain HTML page into an enterprise-grade e-commerce website, with almost **no coding required**. All you need is to tag HTML pages following some conventions (i.e. class names and SKU codes) and embed Commerce Layer's [official JS library](https://github.com/commercelayer/commercelayer-js). Prices, availability messages, and shopping bag functionalities are automatically mixed into your own content and styling, whatever the CMS, SSG and tools you use to build your site pages.
+Commerce Layer is an API-first platform that lets you transform any plain HTML page into an enterprise-grade e-commerce website, with almost **no coding required**. All you need is to tag HTML pages following some conventions (i.e. class names and SKU codes) and embed Commerce Layer's [official JS library](https://github.com/commercelayer/commercelayer-js-dropin). Prices, availability messages, and shopping bag functionalities are automatically mixed into your own content and styling, whatever the CMS, SSG and tools you use to build your site pages.
 
 ## 1. Get Your API Credentials
 
-Create a [free developer account](https://core.commercelayer.io/users/sign_up) on Commerce Layer and &mdash; when prompted &mdash; seed it with test data. Navigate to _Settings_ → _Applications_ and take note of the API credentials for your _channel_ application (Client ID, Base endpoint, Allowed scopes). Make sure that **public access is enabled**. The Client secret is not required, as we are building a client side application that would make the secret key visible ([learn more](https://commercelayer.io/api/reference/roles-and-permissions/)).
+Create a [free developer account](https://core.commercelayer.io/users/sign_up) on Commerce Layer and &mdash; when prompted &mdash; seed it with test data. Navigate to _Settings_ → _Applications_ and take note of the API credentials for your _sales channel_ application (client ID, base endpoint, allowed scopes).
 
 ![Credentials](docs/sales_channel.png?raw=true 'Credentials')
 
@@ -12,7 +12,7 @@ Create a [free developer account](https://core.commercelayer.io/users/sign_up) o
 
 Add an element with `clayer-config` ID and populate its data attributes with your credentials and page preferences. Then add a script link to import the Commerce Layer's JS library right before the closing body tag:
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head></head>
@@ -47,7 +47,7 @@ Add an element with `clayer-config` ID and populate its data attributes with you
 
 Add any content to the page, like product names, descriptions, and images.
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -83,7 +83,7 @@ Add any content to the page, like product names, descriptions, and images.
 
 Add an element with `clayer-price` class and `data-sku-code` data attribute wherever you want to show a product price. The child element with class `amount` gets populated with the price that has been defined in Commerce Layer for that SKU code, in the current page market ID (see configuration). The child element with class `compare-at-amount` gets populated only if greater than the price amount.
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -111,9 +111,9 @@ Add an element with `clayer-availability-message-available-template` ID as the t
 
 Add an element with `clayer-availability-message-unavailable-template` ID as the template tag to be displayed when the selected SKU is not available. This element will be appended to a specific container when customers will try to add to bag an SKU that is not available (more on this later).
 
-Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` or `span` elements and hide them through CSS if you want to keep legacy browser support.
+> Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` or `span` elements and hide them through CSS if you want to keep legacy browser support.
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -158,7 +158,7 @@ Note that `template` tags are not supported by _IE_ and _Opera Mini_. Use `div` 
 
 Add a link with `clayer-add-to-bag` class and a list of data attributes as follows:
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -196,7 +196,7 @@ Add a link with `clayer-add-to-bag` class and a list of data attributes as follo
 
 The SKU `data-sku-name`, `data-sku-reference`, and `data-sku-image-url` (if present) are used as the line item attributes. The `data-availability-message-container-id` identifies the ID of the element that you want the unavailable messagfe to be appended when the SKU is out of stock. Put the container anywhere in the page:
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -228,7 +228,7 @@ The SKU `data-sku-name`, `data-sku-reference`, and `data-sku-image-url` (if pres
 
 Sometimes you may want to let the customer add more than one item to the shopping bag. To do that, add an input field with `clayer-add-to-bag-quantity` class and a `data-add-to-bag-quantity-id` data attribute to the add to bag button as follows:
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -277,7 +277,7 @@ Sometimes you may want to let the customer add more than one item to the shoppin
 
 If your product has many variants, add an element with `clayer-variant` class and `data-sku-code` for each variant option. You can use either a `select` tag or a list of `radio` buttons. The list if data attributes that you can add to each option are the same of the shopping bag example above. The add to bag button is not referred to a specific SKU and its data attributes get updated when an option is selected. You can optionally add a quantity field to let the customer add more than one item to the shopping bag.
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -392,7 +392,7 @@ The `clayer-shopping-bag-items-container` is used as the parent element of the s
 
 Add the summary elements wherever you want to show the current shopping bag details. The `clayer-shopping-bag-toggle` element toggles an `open` class on the shopping bag container.
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -488,9 +488,9 @@ Add the summary elements wherever you want to show the current shopping bag deta
 
 ## 9. Checkout Button
 
-Add an element with `clayer-shopping-bag-checkout` class wherever you want to show the checkout button. The customer will be redirected to the Commerce Layer's hosted checkout application to complete the purchase and place the order.
+Add an element with `clayer-shopping-bag-checkout` class wherever you want to show the checkout button, so that the customer can complete the purchase and place the order.
 
-```html
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -547,6 +547,8 @@ Note the the list of SKUs for a given market can be empty for one of the followi
 
 ## 11. Custom checkout, customer accounts, and more
 
-For some clients, you may want to build your own checkout experience, rather than redirecting customers to the hosted checkout application provided by Commerce Layer. Another common feature that you may want to build is a customer account area, where they can manage their order history, wallet (i.e. saved payment methods), address book and returns.
+We developed an open source [checkout application](https://github.com/commercelayer/commercelayer-checkout). It can be used as is or as a reference in case you need to develop a custom checkout experience through the API, to fully match your branding requirements or your clients' ones.
 
-The next versions of Commerce Layer's JS library will be enhanced to provide all those features with equal ease. In the meantime, please explore the official [API reference](https://commercelayer.io/api/reference/) for all the available endpoints and resources.
+Another common feature that you may want to build is a customer account area, where they can manage their order history, wallet (i.e. saved payment methods), address book and returns.
+
+The next versions of Commerce Layer's JS library will be enhanced to provide all those features with equal ease. In the meantime, please explore the official [API reference](https://docs.commercelayer.io/api/) for all the available endpoints and resources.
